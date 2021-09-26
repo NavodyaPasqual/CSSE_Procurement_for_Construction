@@ -1,0 +1,12 @@
+# API Server
+fastapi
+uvicorn[standard]
+
+# Database
+motor
+dnspython
+
+
+#calculation
+numpy
+scipy 
