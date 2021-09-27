@@ -9,15 +9,15 @@ const Navbar = () =>{
 
     const isActive = (history, path) => {
         if(history.location.pathname === path){
-            return { color: "#ffffff"}
+            return { color: "#aca5a5"}
         } else {
-            return { color: "#887688"}
+            return { color: "#000000"}
         }
     };
 
     return (
         <div data-testid="nav-1 row">
-            <nav className="navbar navbar-expand-lg navbar-custom">
+            <nav className="navbar shadow-sm navbar-expand-lg navbar-custom">
                 <div className="container-fluid">
                     <div className="navbar-brand">
                         <a className="navbar-brand" href="/">
@@ -32,13 +32,13 @@ const Navbar = () =>{
                     </button>
                     <div className="nav collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ">
-
                             <div className="navbar-nav mr-auto">
-
                                 <li className="nav-item">
                                     <Link className="nav-link" style={isActive(history, '/')} to="/">Dashboard</Link>
                                 </li>
-
+                                <li className="nav-item">
+                                    <Link className="nav-link" style={isActive(history, '/registration')} to="/registration">dd</Link>
+                                </li>
                             </div>
                         </ul>
                     </div>
@@ -46,17 +46,17 @@ const Navbar = () =>{
                     <div className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link to={"/login"}  style={isActive(history, '/login')} className="nav-link">
-                                Login
+                                <b>Login</b>
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to={"#"} style={isActive(history, '#')} className="nav-link">
+                            <Link to={"/registration"} style={isActive(history, '/registration')} className="nav-link">
                                 <button class="button-submit button2-submit">Sign Up</button>
                             </Link>
                         </li>
                     </div>
-                )}
+                
             </div>
             </nav>
         </div>

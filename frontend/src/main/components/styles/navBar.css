@@ -3,11 +3,12 @@
     font-size: 18px;
 }
 .navbar-custom {
-    background-color: #340634;
+    background-color: #ffffff;
+    shape-outside: revert;
 }
 
 .navbar-brand span{
-    background: -webkit-linear-gradient(#ffffff, #6b556b);
+    background: -webkit-linear-gradient(#c6c6d2, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 30px;
@@ -16,6 +17,10 @@
 
 .navbar-brand a {
     font-family: "Algerian";
+}
+
+.nav li{
+    font-size: 20px;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -39,15 +44,16 @@
 }
 
 .button2-submit {
-    background-color: #ffffff;
-    color: #6b556b;
+    background-color: #000000;
+    color: #ffffff;
     font-weight: bold;
+    border-radius: 0px;
     border: 2px solid #ffffff;
 }
 
 .button2-submit:hover {
-    background-color: #882e88;
+    background-color: #777575;
     color: #ffffff;
-    border: 2px solid #882e88;
+    border: 2px solid #777575;
     transform: scale(1.01);
 }
