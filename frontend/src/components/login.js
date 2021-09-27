@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button";
-
-import img from './images/login.png'
+import img from './images/login.png';
+import './styles/button.css';
 
 const Login = () => {
     return (
@@ -17,7 +16,7 @@ const Login = () => {
                     <div className="p-3">
                         <Form className="row g-3">
                             <div className="col-md-12">
-                                <label className="form-label" htmlFor="username">username</label>
+                                <label className="form-label" htmlFor="username">User name</label>
                                 <Input
                                     type="text"
                                     className="form-control"
@@ -35,7 +34,7 @@ const Login = () => {
                                 />
                             </div>
                             <div className="d-grid mt-5 gap-2">
-                                <button className="btn btn-primary btn-block">
+                                <button className="button-black-submit button2-black-submit">
                                     <span>Login</span>
                                 </button>
                             </div>

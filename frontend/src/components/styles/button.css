@@ -1,0 +1,24 @@
+.button-black-submit{
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2-black-submit {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #000000;
+}
+
+.button2-black-submit:hover {
+    background-color: #676666;
+    color: white;
+}

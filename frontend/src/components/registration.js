@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button";
-
 import img from "./images/registrion.png";
+import './styles/button.css';
 
 const Register = () => {
     return (
@@ -56,7 +55,7 @@ const Register = () => {
                                     </div>
 
                                     <div className="d-grid mt-3 gap-2">
-                                        <button data-testid='submit-btn' className="btn btn-primary btn-block">Sign Up</button>
+                                        <button data-testid='submit-btn' className="button-black-submit button2-black-submit">Sign Up</button>
                                     </div>
                                 </div>
                         </Form>
