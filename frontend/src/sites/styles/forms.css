@@ -1,0 +1,38 @@
+.background img{
+    position: absolute;
+    right: 100px;
+    width: 180px;
+}
+.background-view .top{
+    position: absolute;
+    right: 0px;
+    width: 190px;
+}
+
+.background h1{
+    color: #793179;
+    font-weight:  bold;
+}
+
+.background h3{
+    color: #793179;
+    font-weight:  bold;
+}
+
+.background h5{
+    color: #803480;
+    font-weight:  bold;
+}
+
+.background i{
+    color: #7a067a;
+}
+
+.background label{
+    color: #6b556b;
+}
+
+.background-update-transaction {
+    max-width: 50%;
+    position: center;
+}

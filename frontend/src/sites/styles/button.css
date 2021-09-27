@@ -1,0 +1,107 @@
+.button-green {
+    background-color: Transparent; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2-green {
+    background-color: Transparent;
+    color: #267808;
+    font-weight: bold;
+    border: 2px solid #267808;
+}
+
+.button2-green:hover {
+    background-color: #267808;
+    color: white;
+}
+
+.button-red {
+    background-color: Transparent; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2-red {
+    background-color: Transparent;
+    color: #FF0000;
+    font-weight: bold;
+    border: 2px solid #FF0000;
+}
+
+.button2-red:hover {
+    background-color: #FF0000;
+    color: white;
+}
+
+.button-orange {
+    background-color: Transparent; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2-orange {
+    background-color: Transparent;
+    color: #f49b4e;
+    font-weight: bold;
+    border: 2px solid #f49b4e;
+}
+
+.button2-orange:hover {
+    background-color: #f49b4e;
+    color: white;
+}
+
+.button-black{
+    background-color: Transparent; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2-black {
+    background-color: Transparent;
+    color: #000000;
+    font-weight: bold;
+    border: 2px solid #000000;
+}
+
+.button2-black:hover {
+    background-color: #474646;
+    color: white;
+}
