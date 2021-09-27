@@ -7,6 +7,8 @@ import Register from "../components/registration";
 import Login from "../components/login";
 import AddSite from "../sites/addSite";
 import ListOfSites from "../sites/listOfSites";
+import AddItems from "../items/addItems";
+import ListOfItems from "../items/listOfItems";
 
 function PageRoutes() {
     return (
@@ -20,6 +22,8 @@ function PageRoutes() {
                         <Route path="/login" component={Login}/>
                         <Route path="/add-site" component={AddSite}/>
                         <Route path="/sites" component={ListOfSites}/>
+                        <Route path="/add-item" component={AddItems}/>
+                        <Route path="/items" component={ListOfItems}/>
                     </Switch>
                 </section>
             </Router>

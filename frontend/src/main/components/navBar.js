@@ -42,6 +42,12 @@ const Navbar = () =>{
                                 <li className="nav-item">
                                     <Link className="nav-link" style={isActive(history, '/sites')} to="/sites">Sites</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" style={isActive(history, '/add-item')} to="/add-item">Add Item</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" style={isActive(history, '/items')} to="/items">Items</Link>
+                                </li>
                             </div>
                         </ul>
                     </div>
