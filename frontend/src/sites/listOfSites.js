@@ -1,10 +1,95 @@
 import React, {useState, useEffect} from "react";
 import './styles/lisOfSites.css';
 import {Link} from "react-router-dom";
+import axios from "axios";
+import spinner from "./image/spinner.gif";
+import './styles/loading.css';
 
 const ListOfSites = () => {
+    const [site, setSite] = useState([]);
+    const [setError] = useState([]);
+    const [q, setQ] = useState("");
+    const [searchParam] = useState(["siteID", "name"]);
+    const [filterParam] = useState(["All"]);
+    const [values, setValues] = useState({
+        loading: false,
+    });
+    const {
+        loading
+    } = values;
+
+    const search = () => {
+        return site.filter((item) => {
+            if (item.region === filterParam) {
+                return searchParam.some((newItem) => {
+                    return (
+                        item[newItem]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(q.toLowerCase()) > -1
+                    );
+                });
+            } else if (filterParam == "All") {
+                return searchParam.some((newItem) => {
+                    return (
+                        item[newItem]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(q.toLowerCase()) > -1
+                    );
+                });
+            }
+        });
+    }
+
+    const getSite = () => {
+        setValues({...values,loading: true})
+        return fetch(`http://localhost:8081/site/`, {
+            method: "GET"
+        })
+            .then(response => {
+                return response.json();
+            })
+            .catch(err => console.log(err));
+    };
+
+    const loadSite = () => {
+        getSite()
+            .then(data => {
+                if(data.error) {
+                    setError(data.error)
+                } else {
+                    setValues({...values,loading: false})
+                    console.log(data[0].date)
+                    setSite(data)
+                }
+            })
+    };
+
+    const deleteSite = (e, id) => {
+        const r = window.confirm("Do you really want to delete the site ?");
+        if(r == true) {
+            axios.delete(`http://localhost:8081/site/delete/${id}`)
+                .then(response => {
+                    loadSite()
+                })
+        }
+
+    };
+
+    useEffect(() => {
+        loadSite()
+    }, [])
+
+    const showLoading = () =>
+        loading && (<div className="overlay-top">
+            <h1 className="txt-main">Please wait....</h1>
+            <img className="loadingImg" src={spinner} alt="inner" />
+        </div>);
+
     return (
         <div className="background-st-ac p-3">
+            {showLoading()}
             <div className="card shadow p-3 mb-4 bg-body rounded">
                 <div className="row g-2">
                     <div className="col-md">
@@ -21,6 +106,8 @@ const ListOfSites = () => {
                                             type="search"
                                             className="form-control"
                                             placeholder="Search..."
+                                            value={q}
+                                            onChange={(e) => setQ(e.target.value)}
                                         />
                                         <span className="input-group-text"><i className="fas fa-search"></i></span>
                                     </div>
@@ -49,17 +136,19 @@ const ListOfSites = () => {
                             </tr>
                             </thead>
                             <tbody>
-                                <tr className="align-top">
-                                    <td>S3456</td>
-                                    <td>Colombo</td>
-                                    <td>Colombo</td>
+                            {search(site).map((c, i) => (
+                                <tr key={i} className="align-top">
+                                    <td>{c.siteID}</td>
+                                    <td>{c.name}</td>
+                                    <td>{c.location}</td>
                                     <td>
                                         <button className="btn btn-outline-warning me-md-2"><i className="fas fa-edit"></i></button>
                                     </td>
                                     <td>
-                                        <button className="btn btn-outline-danger"><i className="fas fa-trash"></i></button>
+                                        <button className="btn btn-outline-danger" onClick={e => deleteSite(e, c._id)}><i className="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
