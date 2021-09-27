@@ -9,6 +9,7 @@ import AddSite from "../sites/addSite";
 import ListOfSites from "../sites/listOfSites";
 import AddItems from "../items/addItems";
 import ListOfItems from "../items/listOfItems";
+import AddOrder from "../order/addOrder";
 
 function PageRoutes() {
     return (
@@ -24,6 +25,7 @@ function PageRoutes() {
                         <Route path="/sites" component={ListOfSites}/>
                         <Route path="/add-item" component={AddItems}/>
                         <Route path="/items" component={ListOfItems}/>
+                        <Route path="/add-order" component={AddOrder}/>
                     </Switch>
                 </section>
             </Router>

@@ -43,7 +43,6 @@ const ListOfItems = () => {
                             <tr>
                                 <th>Item ID</th>
                                 <th>Item Name</th>
-                                <th>Quantity</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
@@ -51,7 +50,6 @@ const ListOfItems = () => {
                             <tbody>
                                 <tr className="align-top">
                                     <td>S3456</td>
-                                    <td>Colombo</td>
                                     <td>Colombo</td>
                                     <td>
                                         <button className="btn btn-outline-warning me-md-2"><i className="fas fa-edit"></i></button>

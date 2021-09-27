@@ -3,7 +3,6 @@ import './styles/lisOfSites.css';
 import {Link} from "react-router-dom";
 
 const ListOfSites = () => {
-
     return (
         <div className="background-st-ac p-3">
             <div className="card shadow p-3 mb-4 bg-body rounded">
