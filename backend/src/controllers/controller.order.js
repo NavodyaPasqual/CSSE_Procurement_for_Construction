@@ -15,6 +15,8 @@ const createOrder = async (req, res) => {
 
 const getAllOrders = async (req, res) => {
     await Order.find({})
+        .populate('item', 'name itemID')
+        .populate('site', 'name siteID')
         .then(data=>{
             res.status(200).send({data: data});
         })

@@ -10,11 +10,11 @@ const OrderSchema = new mongoose.Schema(
             min: 1,
             max: 50
         },
-        site : {
+        site : [{
             type: mongoose.Schema.Types.ObjectId,
             required: false,
             ref: 'sites'
-        },
+        }],
         item: [{
             type: mongoose.Schema.Types.ObjectId,
             required: false,
