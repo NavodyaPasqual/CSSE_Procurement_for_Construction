@@ -51,6 +51,12 @@ const Navbar = () =>{
                                 <li className="nav-item">
                                     <Link className="nav-link" style={isActive(history, '/add-order')} to="/add-order">Add Order</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" style={isActive(history, '/orders')} to="/orders">Orders</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" style={isActive(history, '/order/status/update')} to="/order/status/update">Orders Status</Link>
+                                </li>
                             </div>
                         </ul>
                     </div>

@@ -10,6 +10,8 @@ import ListOfSites from "../sites/listOfSites";
 import AddItems from "../items/addItems";
 import ListOfItems from "../items/listOfItems";
 import AddOrder from "../order/addOrder";
+import ViewOrderList from "../order/viewOrderList";
+import UpdateOrderStatus from "../order/updateOrderStatus";
 
 function PageRoutes() {
     return (
@@ -26,6 +28,8 @@ function PageRoutes() {
                         <Route path="/add-item" component={AddItems}/>
                         <Route path="/items" component={ListOfItems}/>
                         <Route path="/add-order" component={AddOrder}/>
+                        <Route path="/orders" component={ViewOrderList}/>
+                        <Route path="/order/status/update" component={UpdateOrderStatus}/>
                     </Switch>
                 </section>
             </Router>
