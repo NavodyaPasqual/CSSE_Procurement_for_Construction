@@ -26,7 +26,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 }, (error) => {
 
     if (error) {
@@ -37,12 +37,17 @@ mongoose.connect(MONGODB_URI, {
 
 mongoose.connection.once('open', () => {
     console.log('Database Connected...');
+    initial();
     console.log('######################################################');
 });
 
 app.route('/').get((req, res) => {
     res.send('CSSE Group Project');
 });
+
+
+require('./routes/auth.routes')(app);
+require('./routes/user.routes')(app);
 
 
 app.use('/item', ItemRoute());
@@ -54,3 +59,24 @@ app.listen(PORT, () => {
     console.log(`Server is ON and running on PORT : ${PORT}`);
     console.log('...Wait DB connecting...');
 });
+
+const db = require("./Modules");
+const Role = db.role;
+
+
+  function initial() {
+    Role.estimatedDocumentCount((err, count) => {
+      if (!err && count === 0) {
+        new Role({
+          name: "user"
+        }).save(err => {
+          if (err) {
+            console.log("error", err);
+          }
+  
+          console.log("added 'user' to roles collection");
+         console.log('######################################################');
+        });
+      }
+    });
+  }
