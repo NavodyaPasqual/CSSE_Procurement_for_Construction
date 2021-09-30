@@ -3,12 +3,12 @@
     font-size: 18px;
 }
 .navbar-custom {
-    background-color: #ffffff;
+    background-color: #d3d2d2af;
     shape-outside: revert;
 }
 
 .navbar-brand span{
-    background: -webkit-linear-gradient(#c6c6d2, #000000);
+    background: -webkit-linear-gradient(#0000d8ad, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 30px;
