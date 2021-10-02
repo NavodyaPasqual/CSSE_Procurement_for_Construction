@@ -1,0 +1,27 @@
+.overlay-top {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loadingImg {
+    width: 25%;
+}
+
+.overlay-top h1{
+    background: #6b556b;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family: "Algerian";
+}

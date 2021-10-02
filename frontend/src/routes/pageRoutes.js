@@ -13,6 +13,10 @@ import AddItems from "../items/addItems";
 import ListOfItems from "../items/listOfItems";
 import UpdateItems from "../items/updateItems";
 import ViewItemByID from "../items/viewItemByID";
+import AddSupplier from "../supplier/addSupplier";
+import ListOfSuppliers from "../supplier/listOfSuppliers";
+import UpdateSupplier from "../supplier/updateSupplier";
+import ViewSupplierByID from "../supplier/viewSupplierByID";
 import AddOrder from "../order/addOrder";
 import ViewOrderList from "../order/viewOrderList";
 import UpdateOrderApprovalStatus from "../order/updateOrderApprovalStatus";
@@ -37,6 +41,12 @@ function PageRoutes() {
                         <Route path="/update-item/:id" component={UpdateItems}/>
                         <Route path="/add-item" component={AddItems}/>
                         <Route path="/items" component={ListOfItems}/>
+
+                        <Route path="/view-supplier/:id" component={ViewSupplierByID}/>
+                        <Route path="/update-supplier/:id" component={UpdateSupplier}/>
+                        <Route path="/add-supplier" component={AddSupplier}/>
+                        <Route path="/suppliers" component={ListOfSuppliers}/>
+
                         <Route path="/add-order" component={AddOrder}/>
                         <Route path="/orders" component={ViewOrderList}/>
                         <Route path="/profile" component={profile}/>

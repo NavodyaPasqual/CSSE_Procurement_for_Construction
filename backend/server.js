@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const ItemRoute = require('./src/routes/route.item');
 const SiteRoute = require('./src/routes/route.site');
 const OrderRoute = require('./src/routes/route.order');
+const SupplierRoute = require('./src/routes/route.supplier');
 
 dotenv.config();
 const app = express();
@@ -53,6 +54,7 @@ require('./routes/user.routes')(app);
 app.use('/item', ItemRoute());
 app.use('/site', SiteRoute());
 app.use('/order', OrderRoute());
+app.use('/supplier', SupplierRoute());
 
 app.listen(PORT, () => {
     console.log('######################################################');

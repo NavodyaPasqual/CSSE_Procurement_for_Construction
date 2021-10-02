@@ -31,7 +31,7 @@ const Navbar = () =>{
         if(history.location.pathname === path){
             return { color: "#000000"}
         } else {
-            return { color: "#aca5a5"}
+            return { color: "#989494"}
         }
     };
 
@@ -60,23 +60,70 @@ const Navbar = () =>{
                                         <li className="nav-item">
                                             <Link className="nav-link" style={isActive(history, '/dashboard')} to="/dashboard">Dashboard</Link>
                                         </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" style={isActive(history, '/add-site')} to="/add-site">Add Site</Link>
+                                        {/*<li className="nav-item">
+                                            <Link className="nav-link" style={isActive(history, '/add-site')}
+                                                  to="/add-site">Add Site</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" style={isActive(history, '/sites')} to="/sites">Sites</Link>
+                                        </li>*/}
+                                        <li className="nav-item dropdown">
+                                            <a className="nav-link dropdown-toggle" id="navbarDropdown"
+                                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Sites
+                                            </a>
+                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><Link className="nav-link" style={isActive(history, '/add-site')} to="/add-site">Add Site</Link></li>
+                                                <li><Link className="nav-link" style={isActive(history, '/sites')} to="/sites">List of Sites</Link></li>
+                                            </ul>
                                         </li>
-                                        <li className="nav-item">
+                                        {/*<li className="nav-item">
                                             <Link className="nav-link" style={isActive(history, '/add-item')} to="/add-item">Add Item</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" style={isActive(history, '/items')} to="/items">Items</Link>
+                                        </li>*/}
+                                        <li className="nav-item dropdown">
+                                            <a className="nav-link dropdown-toggle" id="navbarDropdown"
+                                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Items
+                                            </a>
+                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><Link className="nav-link" style={isActive(history, '/add-item')} to="/add-item">Add Item</Link></li>
+                                                <li><Link className="nav-link" style={isActive(history, '/items')} to="/items">List of Items</Link></li>
+                                            </ul>
+                                        </li>
+                                        {/*<li className="nav-item">
+                                            <Link className="nav-link" style={isActive(history, '/add-supplier')} to="/add-supplier">Add Supplier</Link>
                                         </li>
                                         <li className="nav-item">
+                                            <Link className="nav-link" style={isActive(history, '/suppliers')} to="/suppliers">Suppliers</Link>
+                                        </li>*/}
+                                        <li className="nav-item dropdown">
+                                            <a className="nav-link dropdown-toggle" id="navbarDropdown"
+                                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Suppliers
+                                            </a>
+                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><Link className="nav-link" style={isActive(history, '/add-supplier')} to="/add-supplier">Add Supplier</Link></li>
+                                                <li><Link className="nav-link" style={isActive(history, '/suppliers')} to="/suppliers">List of Suppliers</Link></li>
+                                            </ul>
+                                        </li>
+                                        {/*<li className="nav-item">
                                             <Link className="nav-link" style={isActive(history, '/add-order')} to="/add-order">Add Order</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" style={isActive(history, '/orders')} to="/orders">Orders</Link>
+                                        </li>*/}
+                                        <li className="nav-item dropdown">
+                                            <a className="nav-link dropdown-toggle" id="navbarDropdown"
+                                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Orders
+                                            </a>
+                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><Link className="nav-link" style={isActive(history, '/add-order')} to="/add-order">Add Order</Link></li>
+                                                <li><Link className="nav-link" style={isActive(history, '/orders')} to="/orders">List of Orders</Link></li>
+                                            </ul>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" style={isActive(history, '/order/status-approval/update')} to="/order/status-approval/update">Approval Status</Link>
@@ -101,7 +148,7 @@ const Navbar = () =>{
                             </li>
                             <li className="nav-item">
                                 <a href="/login"  style={isActive(history, '/login')} className="nav-link mt-0" onClick={logOut}>
-                                    <button className="button-signUp button2-signup">
+                                    <button className="button-submit button2-submit">
                                         LogOut
                                     </button>
                                 </a>
@@ -111,13 +158,13 @@ const Navbar = () =>{
                         <div className="navbar-nav ml-auto">
                             <li className="nav-item">
                                 <Link to={"/login"}  style={isActive(history, '/login')} className="nav-link">
-                                    Login
+                                    <b>Login</b>
                                 </Link>
                             </li>
 
                             <li className="nav-item">
                                 <Link to={"/registration"} style={isActive(history, '/registration')} className="nav-link">
-                                    Sign Up
+                                    <button className="button-submit button2-submit">Sign Up</button>
                                 </Link> 
                             </li>
                         </div>

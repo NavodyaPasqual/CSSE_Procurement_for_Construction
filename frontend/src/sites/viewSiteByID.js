@@ -50,7 +50,7 @@ class ViewSiteByID extends Component {
                 </div>
                 <div className="container-3 shadow-lg w-50 mt-4 p-4 rounded">
                     <div >
-                        <h3><center>Sites</center></h3>
+                        <h3><center>Site</center></h3>
                         <div className=""><br/>
                             <form onSubmit={this.onSubmit}>
                                 <div className="body">

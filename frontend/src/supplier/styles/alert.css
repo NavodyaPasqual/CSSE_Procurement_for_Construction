@@ -1,0 +1,6 @@
+.toast:not(.showing):not(.show) {
+    opacity: 3;
+}
+.toast {
+    background-color: #ddae0f;
+}

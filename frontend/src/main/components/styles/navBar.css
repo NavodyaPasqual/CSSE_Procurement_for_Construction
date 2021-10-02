@@ -21,6 +21,23 @@
 
 .nav li{
     font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link{
+    color: #989494;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.a{
+    color: #989494;
+}
+
+.a:hover{
+    color: black;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -48,7 +65,7 @@
     color: #ffffff;
     font-weight: bold;
     border-radius: 0px;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
 }
 
 .button2-submit:hover {
