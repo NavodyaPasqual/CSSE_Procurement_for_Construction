@@ -146,81 +146,93 @@ class AddOrder extends Component {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <label htmlFor="item" className="form-label">Item 1</label>
-                                <div className="mb-3">
-                                        <Select
-                                            options = {this.state.items}
-                                            className="basic-multi-select"
-                                            onChange={this.onItemSelect1}
-                                            isMulti
+                                <div className="row">
+                                <div className="col-6">
+                                    <label htmlFor="item" className="form-label">Item 1</label>
+                                    <div className="mb-3">
+                                            <Select
+                                                options = {this.state.items}
+                                                className="basic-multi-select"
+                                                onChange={this.onItemSelect1}
+                                                isMulti
+                                            />
+                                    </div>
+                                </div>
+                                <div className="col-6">
+                                    <label htmlFor="quantity1" className="form-label">Quantity</label>
+                                    <div className="input-group mb-3">
+                                        <span className="input-group-text"><i
+                                            className="fas fa-sort-numeric-up-alt"></i></span>
+                                        <input
+                                            type="number"
+                                            className="form-control"
+                                            id="quantity1"
+                                            name="quantity1"
+                                            value={this.state.quantity1}
+                                            onChange={this.onChange}
                                         />
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                             <div className="col-12">
-                                <label htmlFor="quantity1" className="form-label">Quantity</label>
-                                <div className="input-group mb-3">
-                                    <span className="input-group-text"><i
-                                        className="fas fa-sort-numeric-up-alt"></i></span>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="quantity1"
-                                        name="quantity1"
-                                        value={this.state.quantity1}
-                                        onChange={this.onChange}
-                                    />
+                                <div className="row">
+                                    <div className="col-6">
+                                        <label htmlFor="item" className="form-label">Item 2</label>
+                                        <div className="mb-3">
+                                            <Select
+                                                options = {this.state.items}
+                                                className="basic-multi-select"
+                                                onChange={this.onItemSelect2}
+                                                isMulti
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-6">
+                                        <label htmlFor="quantity2" className="form-label">Quantity</label>
+                                        <div className="input-group mb-3">
+                                        <span className="input-group-text"><i
+                                            className="fas fa-sort-numeric-up-alt"></i></span>
+                                            <input
+                                                type="number"
+                                                className="form-control"
+                                                id="quantity2"
+                                                name="quantity2"
+                                                value={this.state.quantity2}
+                                                onChange={this.onChange}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-12">
-                                <label htmlFor="item" className="form-label">Item 2</label>
-                                <div className="mb-3">
-                                    <Select
-                                        options = {this.state.items}
-                                        className="basic-multi-select"
-                                        onChange={this.onItemSelect2}
-                                        isMulti
-                                    />
-                                </div>
-                            </div>
-                            <div className="col-12">
-                                <label htmlFor="quantity2" className="form-label">Quantity</label>
-                                <div className="input-group mb-3">
-                                    <span className="input-group-text"><i
-                                        className="fas fa-sort-numeric-up-alt"></i></span>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="quantity2"
-                                        name="quantity2"
-                                        value={this.state.quantity2}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                            </div>
-                            <div className="col-12">
-                                <label htmlFor="item" className="form-label">Item 3</label>
-                                <div className="mb-3">
-                                    <Select
-                                        options = {this.state.items}
-                                        className="basic-multi-select"
-                                        onChange={this.onItemSelect3}
-                                        isMulti
-                                    />
-                                </div>
-                            </div>
-                            <div className="col-12">
-                                <label htmlFor="quantity3" className="form-label">Quantity</label>
-                                <div className="input-group mb-3">
-                                    <span className="input-group-text"><i
-                                        className="fas fa-sort-numeric-up-alt"></i></span>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="quantity3"
-                                        name="quantity3"
-                                        value={this.state.quantity3}
-                                        onChange={this.onChange}
-                                    />
+                                <div className="row">
+                                    <div className="col-6">
+                                        <label htmlFor="item3" className="form-label">Item 3</label>
+                                        <div className="mb-3">
+                                            <Select
+                                                options = {this.state.items}
+                                                className="basic-multi-select"
+                                                onChange={this.onItemSelect3}
+                                                isMulti
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-6">
+                                        <label htmlFor="quantity3" className="form-label">Quantity</label>
+                                        <div className="input-group mb-3">
+                                        <span className="input-group-text"><i
+                                            className="fas fa-sort-numeric-up-alt"></i></span>
+                                            <input
+                                                type="number"
+                                                className="form-control"
+                                                id="quantity3"
+                                                name="quantity3"
+                                                value={this.state.quantity3}
+                                                onChange={this.onChange}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button className="mt-5 button-black button2-black">Create the Item</button>
