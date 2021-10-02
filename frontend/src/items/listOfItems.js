@@ -131,6 +131,7 @@ const ListOfItems = () => {
                             <tr>
                                 <th>Item ID</th>
                                 <th>Item Name</th>
+                                <th>View</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
@@ -141,7 +142,18 @@ const ListOfItems = () => {
                                     <td>{c.itemID}</td>
                                     <td>{c.name}</td>
                                     <td>
-                                        <button className="btn btn-outline-warning me-md-2"><i className="fas fa-edit"></i></button>
+                                        <Link to={`/view-item/${c._id}`}>
+                                            <button className="btn btn-outline-secondary me-md-2">
+                                                <i className="fas fa-eye"></i>
+                                            </button>
+                                        </Link>
+                                    </td>
+                                    <td>
+                                        <Link to={`/update-item/${c._id}`}>
+                                            <button className="btn btn-outline-warning me-md-2">
+                                                <i className="fas fa-edit"></i>
+                                            </button>
+                                        </Link>
                                     </td>
                                     <td>
                                         <button className="btn btn-outline-danger" onClick={e => deleteItem(e, c._id)}><i className="fas fa-trash"></i></button>

@@ -131,6 +131,7 @@ const ListOfSites = () => {
                                 <th>Site ID</th>
                                 <th>Site Name</th>
                                 <th>Location</th>
+                                <th>View</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
@@ -142,7 +143,18 @@ const ListOfSites = () => {
                                     <td>{c.name}</td>
                                     <td>{c.location}</td>
                                     <td>
-                                        <button className="btn btn-outline-warning me-md-2"><i className="fas fa-edit"></i></button>
+                                        <Link to={`/view-site/${c._id}`}>
+                                            <button className="btn btn-outline-secondary me-md-2">
+                                                <i className="fas fa-eye"></i>
+                                            </button>
+                                        </Link>
+                                    </td>
+                                    <td>
+                                        <Link to={`/update-site/${c._id}`}>
+                                            <button className="btn btn-outline-warning me-md-2">
+                                                <i className="fas fa-edit"></i>
+                                            </button>
+                                        </Link>
                                     </td>
                                     <td>
                                         <button className="btn btn-outline-danger" onClick={e => deleteSite(e, c._id)}><i className="fas fa-trash"></i></button>

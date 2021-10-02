@@ -37,7 +37,7 @@ const Navbar = () =>{
 
     return (
         <div data-testid="nav-1 row">
-            <nav className="navbar shadow-sm navbar-expand-lg navbar-custom">
+            <nav className="navbar navbar-expand-lg navbar-custom">
                 <div className="container-fluid">
                     <div className="navbar-brand">
                         <a className="navbar-brand" href="/login">
