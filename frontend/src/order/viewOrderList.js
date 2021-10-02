@@ -20,7 +20,7 @@ class ViewOrderList extends Component {
     //to call the end point and delete a value using axios
     deleteOrder(e, id){
         const r = window.confirm("Do you really want to delete payment submission");
-        if(r == true) {
+        if(r === true) {
             axios.delete(`http://localhost:8081/order/delete/${id}`)
                 .then(response => {
                     alert('Data successfully deleted')
@@ -33,16 +33,14 @@ class ViewOrderList extends Component {
         return (
             <div className="background-workshop">
                 <div className="container p-3">
-                    <h1>Order List</h1><br/>
+                    <center><h1>Order List</h1></center>
                     <div className="p-3">
                         {this.state.orders.length > 0 && this.state.orders.map((item,index) => (
                             <div key={index}>
                                 <div className="card shadow p-3 mb-5 bg-body rounded">
-                                    {item.status == "Not decided" &&
                                     <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                                         <button className="btn btn-outline-danger" onClick={e => this.deleteOrder(e,item._id)}><i className="fas fa-trash">&nbsp;&nbsp;DELETE</i></button>
                                     </div>
-                                    }
                                     <div className="row">
                                         <dt className="col-sm-2">orderID</dt>
                                         <dd className="col-sm-10">{item.orderID}</dd>
@@ -68,7 +66,9 @@ class ViewOrderList extends Component {
                                         : null}
                                     {/* Item 1 */}
                                     <div className="row">
+                                        {item.quantity1 !== 0 &&
                                         <dt className="col-sm-2">Item 1</dt>
+                                        }
                                         <div className="col-sm-10">
                                             <div className="row">
                                                 <div className="col-md-6">
@@ -89,18 +89,22 @@ class ViewOrderList extends Component {
                                                         </div>
                                                         : null}
                                                 </div>
-                                                <div className="col-md-6 card p-2 mb-2" >
+                                                {item.quantity1 !== 0 &&
+                                                <div className="col-md-6 card p-2 mb-2">
                                                     <div className="row">
                                                         <dt className="col-sm-4">Quantity</dt>
                                                         <dd className="col-sm-8">{item.quantity1}</dd>
                                                     </div>
                                                 </div>
+                                                }
                                             </div>
                                         </div>
                                     </div>
                                     {/* Item 2 */}
                                     <div className="row">
+                                        {item.quantity2 !== 0 &&
                                         <dt className="col-sm-2">Item 2</dt>
+                                        }
                                         <div className="col-sm-10">
                                             <div className="row">
                                                 <div className="col-md-6">
@@ -121,18 +125,22 @@ class ViewOrderList extends Component {
                                                         </div>
                                                         : null}
                                                 </div>
-                                                <div className="col-md-6 card p-2 mb-2" >
+                                                {item.quantity2 !== 0 &&
+                                                <div className="col-md-6 card p-2 mb-2">
                                                     <div className="row">
                                                         <dt className="col-sm-4">Quantity</dt>
                                                         <dd className="col-sm-8">{item.quantity2}</dd>
                                                     </div>
                                                 </div>
+                                                }
                                             </div>
                                         </div>
                                     </div>
                                     {/* Item 3 */}
                                     <div className="row">
+                                        {item.quantity3 !== 0 &&
                                         <dt className="col-sm-2">Item 3</dt>
+                                        }
                                         <div className="col-sm-10">
                                             <div className="row">
                                                 <div className="col-md-6">
@@ -153,7 +161,7 @@ class ViewOrderList extends Component {
                                                         </div>
                                                         : null}
                                                 </div>
-                                                {item.quantity3 !== null &&
+                                                {item.quantity3 !== 0 &&
                                                 <div className="col-md-6 card p-2 mb-2">
                                                     <div className="row">
                                                         <dt className="col-sm-4">Quantity</dt>
@@ -191,7 +199,13 @@ class ViewOrderList extends Component {
                                         {item.deliveryStatus === "Not delivered" &&
                                         <div className="row">
                                             <dt className="col-sm-2">Delivery Status</dt>
-                                            <dd className="col-sm-10"><h6><span className="badge bg-danger">{item.deliveryStatus}</span></h6></dd>
+                                            <dd className="col-sm-10"><h6><span className="badge bg-warning">{item.deliveryStatus}</span></h6></dd>
+                                        </div>
+                                        }
+                                        {item.deliveryStatus === "Delivered" &&
+                                        <div className="row">
+                                            <dt className="col-sm-2">Delivery Status</dt>
+                                            <dd className="col-sm-10"><h6><span className="badge bg-success">{item.deliveryStatus}</span></h6></dd>
                                         </div>
                                         }
                                     </div>

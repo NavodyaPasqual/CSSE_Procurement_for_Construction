@@ -15,7 +15,8 @@ import UpdateItems from "../items/updateItems";
 import ViewItemByID from "../items/viewItemByID";
 import AddOrder from "../order/addOrder";
 import ViewOrderList from "../order/viewOrderList";
-import UpdateOrderStatus from "../order/updateOrderStatus";
+import UpdateOrderApprovalStatus from "../order/updateOrderApprovalStatus";
+import UpdateOrderDeliveryStatus from "../order/updateOrderDeliveryStatus";
 import profile from "../main/components/Profile";
 
 function PageRoutes() {
@@ -39,7 +40,8 @@ function PageRoutes() {
                         <Route path="/add-order" component={AddOrder}/>
                         <Route path="/orders" component={ViewOrderList}/>
                         <Route path="/profile" component={profile}/>
-                        <Route path="/order/status/update" component={UpdateOrderStatus}/>
+                        <Route path="/order/status-approval/update" component={UpdateOrderApprovalStatus}/>
+                        <Route path="/order/status-delivery/update" component={UpdateOrderDeliveryStatus}/>
                     </Switch>
                 </section>
             </Router>
