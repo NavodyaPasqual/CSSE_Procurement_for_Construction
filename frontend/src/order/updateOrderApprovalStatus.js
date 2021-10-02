@@ -65,6 +65,25 @@ class UpdateOrderApprovalStatus extends Component {
                                                 </dd>
                                             </div>
                                             : null}
+                                        {item.supplier && item.supplier.length > 0 ?
+                                            <div className="row">
+                                                <dt className="col-sm-2">Supplier</dt>
+                                                <dd className="col-sm-10">
+                                                    {item.supplier.map((supplier, index) => (
+                                                        <div key={index} className="card p-2 mb-2">
+                                                            <div className="row">
+                                                                <dt className="col-sm-2">Supplier ID</dt>
+                                                                <dd className="col-sm-10">{supplier.supplierID}</dd>
+                                                            </div>
+                                                            <div className="row">
+                                                                <dt className="col-sm-2">Supplier Name</dt>
+                                                                <dd className="col-sm-10">{supplier.name}</dd>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </dd>
+                                            </div>
+                                            : null}
                                         {/* Item 1 */}
                                         <div className="row">
                                             {item.quantity1 !== 0 &&

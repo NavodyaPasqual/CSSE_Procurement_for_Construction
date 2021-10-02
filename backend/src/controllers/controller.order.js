@@ -19,6 +19,7 @@ const getAllOrders = async (req, res) => {
         .populate('item2', 'name itemID')
         .populate('item3', 'name itemID')
         .populate('site', 'name siteID')
+        .populate('supplier', 'name supplierID')
         .then(data=>{
             res.status(200).send({data: data});
         })

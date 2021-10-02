@@ -8,6 +8,7 @@ import Select from 'react-select';
 const initialState = {
     orderID:'',
     site:'',
+    supplier: '',
     item1: '',
     item2: '',
     item3: '',
@@ -16,10 +17,12 @@ const initialState = {
     quantity3: 0,
     items: [],
     sites: [],
+    suppliers:[],
     selectedItem1:[],
     selectedItem2:[],
     selectedItem3:[],
     selectedSite:[],
+    selectedSupplier:[]
 }
 
 class AddOrder extends Component {
@@ -31,6 +34,7 @@ class AddOrder extends Component {
         this.onItemSelect2 = this.onItemSelect2.bind(this);
         this.onItemSelect3 = this.onItemSelect3.bind(this);
         this.onSiteSelect = this.onSiteSelect.bind(this);
+        this.onSupplierSelect = this.onSupplierSelect.bind(this);
         this.state = initialState;
     }
 
@@ -64,6 +68,20 @@ class AddOrder extends Component {
                     this.setState({sites: data});
                 })
             })
+        axios.get('http://localhost:8081/supplier/')
+            .then(response => {
+                this.setState({suppliers: response.data}, () => {
+                    let data = [];
+                    this.state.suppliers.map((item, index) =>{
+                        let  supplier = {
+                            value:item._id,
+                            label:item.name
+                        }
+                        data.push(supplier)
+                    });
+                    this.setState({suppliers: data});
+                })
+            })
 
     }
 
@@ -76,6 +94,7 @@ class AddOrder extends Component {
         let order = {
             orderID: this.state.orderID,
             site: this.state.selectedSite,
+            supplier: this.state.selectedSupplier,
             item1: this.state.selectedItem1,
             item2: this.state.selectedItem2,
             item3: this.state.selectedItem3,
@@ -99,6 +118,10 @@ class AddOrder extends Component {
 
     onSiteSelect(e) {
         this.setState({selectedSite: e? e.map(item => item.value):[]});
+    }
+
+    onSupplierSelect(e) {
+        this.setState({selectedSupplier: e? e.map(item => item.value):[]});
     }
 
     onItemSelect1(e) {
@@ -141,6 +164,17 @@ class AddOrder extends Component {
                                         options = {this.state.sites}
                                         className="basic-select"
                                         onChange={this.onSiteSelect}
+                                        isMulti
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <label htmlFor="supplier" className="form-label">Supplier name</label>
+                                <div className="mb-3">
+                                    <Select
+                                        options = {this.state.suppliers}
+                                        className="basic-select"
+                                        onChange={this.onSupplierSelect}
                                         isMulti
                                     />
                                 </div>
