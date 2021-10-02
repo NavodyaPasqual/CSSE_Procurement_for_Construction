@@ -47,29 +47,6 @@ class ViewOrderList extends Component {
                                         <dt className="col-sm-2">orderID</dt>
                                         <dd className="col-sm-10">{item.orderID}</dd>
                                     </div>
-                                    <div className="row">
-                                        <dt className="col-sm-2">Quantity</dt>
-                                        <dd className="col-sm-10">{item.quantity}</dd>
-                                    </div>
-                                    {item.status == "Not approved" &&
-                                    <div className="row">
-                                        <dt className="col-sm-2">Status </dt>
-                                        <dd className="col-sm-10"><h6><span className="badge bg-danger">{item.status}</span></h6></dd>
-                                    </div>
-                                    }
-                                    {item.status == "Not decided" &&
-                                    <div className="row">
-                                        <dt className="col-sm-2">Status</dt>
-                                        <dd className="col-sm-10"><h6><span
-                                            className="badge bg-danger">{item.status}</span></h6></dd>
-                                    </div>
-                                    }
-                                    {item.status == "Approved" &&
-                                    <div className="row">
-                                        <dt className="col-sm-2">Status </dt>
-                                        <dd className="col-sm-10"><h6><span className="badge bg-success">{item.status}</span></h6></dd>
-                                    </div>
-                                    }
                                     {item.site && item.site.length > 0 ?
                                         <div className="row">
                                             <dt className="col-sm-2">Site</dt>
@@ -89,21 +66,136 @@ class ViewOrderList extends Component {
                                             </dd>
                                         </div>
                                         : null}
-                                    {item.item && item.item.length > 0 ?
-                                        <div className="row">
-                                            <dt className="col-sm-2">Item</dt>
-                                            <dd className="col-sm-10">
-                                                {item.item.map((item, index) => (
-                                                    <div key={index} className="card p-2 mb-2">
-                                                        <div className="row">
-                                                            <dt className="col-sm-2">Item Name</dt>
-                                                            <dd className="col-sm-10">{item.name}</dd>
+                                    {/* Item 1 */}
+                                    <div className="row">
+                                        <dt className="col-sm-2">Item 1</dt>
+                                        <div className="col-sm-10">
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    {item.item1 && item.item1.length > 0 ?
+                                                        <div>
+                                                            {item.item1.map((item, index) => (
+                                                                <div key={index} className="card p-2 mb-2">
+                                                                    <div className="row">
+                                                                        <dt className="col-sm-4">Item ID</dt>
+                                                                        <dd className="col-sm-8">{item.itemID}</dd>
+                                                                    </div>
+                                                                    <div className="row">
+                                                                        <dt className="col-sm-4">Item Name</dt>
+                                                                        <dd className="col-sm-8">{item.name}</dd>
+                                                                    </div>
+                                                                </div>
+                                                            ))}
                                                         </div>
+                                                        : null}
+                                                </div>
+                                                <div className="col-md-6 card p-2 mb-2" >
+                                                    <div className="row">
+                                                        <dt className="col-sm-4">Quantity</dt>
+                                                        <dd className="col-sm-8">{item.quantity1}</dd>
                                                     </div>
-                                                ))}
-                                            </dd>
+                                                </div>
+                                            </div>
                                         </div>
-                                        : null}
+                                    </div>
+                                    {/* Item 2 */}
+                                    <div className="row">
+                                        <dt className="col-sm-2">Item 2</dt>
+                                        <div className="col-sm-10">
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    {item.item2 && item.item2.length > 0 ?
+                                                        <div>
+                                                            {item.item2.map((item, index) => (
+                                                                <div key={index} className="card p-2 mb-2">
+                                                                    <div className="row">
+                                                                        <dt className="col-sm-4">Item ID</dt>
+                                                                        <dd className="col-sm-8">{item.itemID}</dd>
+                                                                    </div>
+                                                                    <div className="row">
+                                                                        <dt className="col-sm-4">Item Name</dt>
+                                                                        <dd className="col-sm-8">{item.name}</dd>
+                                                                    </div>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                        : null}
+                                                </div>
+                                                <div className="col-md-6 card p-2 mb-2" >
+                                                    <div className="row">
+                                                        <dt className="col-sm-4">Quantity</dt>
+                                                        <dd className="col-sm-8">{item.quantity2}</dd>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* Item 3 */}
+                                    <div className="row">
+                                        <dt className="col-sm-2">Item 3</dt>
+                                        <div className="col-sm-10">
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    {item.item3 && item.item3.length > 0 ?
+                                                        <div>
+                                                            {item.item3.map((item, index) => (
+                                                                <div key={index} className="card p-2 mb-2">
+                                                                    <div className="row">
+                                                                        <dt className="col-sm-4">Item ID</dt>
+                                                                        <dd className="col-sm-8">{item.itemID}</dd>
+                                                                    </div>
+                                                                    <div className="row">
+                                                                        <dt className="col-sm-4">Item Name</dt>
+                                                                        <dd className="col-sm-8">{item.name}</dd>
+                                                                    </div>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                        : null}
+                                                </div>
+                                                {item.quantity3 !== null &&
+                                                <div className="col-md-6 card p-2 mb-2">
+                                                    <div className="row">
+                                                        <dt className="col-sm-4">Quantity</dt>
+                                                        <dd className="col-sm-8">{item.quantity3}</dd>
+                                                    </div>
+                                                </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* End of items */}
+                                    {/* Approval status */}
+                                    {item.status === "Not approved" &&
+                                    <div className="row">
+                                        <dt className="col-sm-2">Approval Status</dt>
+                                        <dd className="col-sm-10"><h6><span className="badge bg-danger">{item.status}</span></h6></dd>
+                                    </div>
+                                    }
+                                    {item.status === "Not decided" &&
+                                    <div className="row">
+                                        <dt className="col-sm-2">Approval Status</dt>
+                                        <dd className="col-sm-10"><h6><span
+                                            className="badge bg-warning">{item.status}</span></h6></dd>
+                                    </div>
+                                    }
+                                    {item.status === "Approved" &&
+                                    <div className="row">
+                                        <dt className="col-sm-2">Approval Status</dt>
+                                        <dd className="col-sm-10"><h6><span className="badge bg-success">{item.status}</span></h6></dd>
+                                    </div>
+                                    }
+                                    {/* Delivery status (Only will display if the approval status is approved*/}
+                                    {item.status === "Approved" &&
+                                    <div>
+                                        {item.deliveryStatus === "Not delivered" &&
+                                        <div className="row">
+                                            <dt className="col-sm-2">Delivery Status</dt>
+                                            <dd className="col-sm-10"><h6><span className="badge bg-danger">{item.deliveryStatus}</span></h6></dd>
+                                        </div>
+                                        }
+                                    </div>
+                                    }
                                 </div>
                             </div>
                         ))}
@@ -112,7 +204,6 @@ class ViewOrderList extends Component {
             </div>
         )
     }
-
 }
 
 export default ViewOrderList;

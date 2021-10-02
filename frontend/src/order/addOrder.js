@@ -8,11 +8,17 @@ import Select from 'react-select';
 const initialState = {
     orderID:'',
     site:'',
-    item: '',
-    quantity: 0,
+    item1: '',
+    item2: '',
+    item3: '',
+    quantity1: 0,
+    quantity2: 0,
+    quantity3: 0,
     items: [],
     sites: [],
-    selectedItem:[],
+    selectedItem1:[],
+    selectedItem2:[],
+    selectedItem3:[],
     selectedSite:[],
 }
 
@@ -21,7 +27,9 @@ class AddOrder extends Component {
         super(props);
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-        this.onItemSelect = this.onItemSelect.bind(this);
+        this.onItemSelect1 = this.onItemSelect1.bind(this);
+        this.onItemSelect2 = this.onItemSelect2.bind(this);
+        this.onItemSelect3 = this.onItemSelect3.bind(this);
         this.onSiteSelect = this.onSiteSelect.bind(this);
         this.state = initialState;
     }
@@ -68,15 +76,19 @@ class AddOrder extends Component {
         let order = {
             orderID: this.state.orderID,
             site: this.state.selectedSite,
-            item: this.state.selectedItem,
-            quantity: this.state.quantity
+            item1: this.state.selectedItem1,
+            item2: this.state.selectedItem2,
+            item3: this.state.selectedItem3,
+            quantity1: this.state.quantity1,
+            quantity2: this.state.quantity2,
+            quantity3: this.state.quantity3
         }
         //call the end point and pass the values using axios
         console.log('data to send', order);
         axios.post('http://localhost:8081/order/create', order )
             .then(response => {
                 alert('Successfully submitted')
-                this.props.history.push('/');
+                this.props.history.push('/orders');
             })
             .catch(error => {
                 console.log(error.message);
@@ -89,8 +101,14 @@ class AddOrder extends Component {
         this.setState({selectedSite: e? e.map(item => item.value):[]});
     }
 
-    onItemSelect(e) {
-        this.setState({selectedItem: e? e.map(item => item.value): []});
+    onItemSelect1(e) {
+        this.setState({selectedItem1: e? e.map(item => item.value): []});
+    }
+    onItemSelect2(e) {
+        this.setState({selectedItem2: e? e.map(item => item.value): []});
+    }
+    onItemSelect3(e) {
+        this.setState({selectedItem3: e? e.map(item => item.value): []});
     }
 
     render() {
@@ -128,27 +146,79 @@ class AddOrder extends Component {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <label htmlFor="item" className="form-label">Item</label>
+                                <label htmlFor="item" className="form-label">Item 1</label>
                                 <div className="mb-3">
                                         <Select
                                             options = {this.state.items}
                                             className="basic-multi-select"
-                                            onChange={this.onItemSelect}
+                                            onChange={this.onItemSelect1}
                                             isMulti
                                         />
                                 </div>
                             </div>
                             <div className="col-12">
-                                <label htmlFor="quantity" className="form-label">Quantity</label>
+                                <label htmlFor="quantity1" className="form-label">Quantity</label>
                                 <div className="input-group mb-3">
                                     <span className="input-group-text"><i
                                         className="fas fa-sort-numeric-up-alt"></i></span>
                                     <input
                                         type="number"
                                         className="form-control"
-                                        id="quantity"
-                                        name="quantity"
-                                        value={this.state.quantity}
+                                        id="quantity1"
+                                        name="quantity1"
+                                        value={this.state.quantity1}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <label htmlFor="item" className="form-label">Item 2</label>
+                                <div className="mb-3">
+                                    <Select
+                                        options = {this.state.items}
+                                        className="basic-multi-select"
+                                        onChange={this.onItemSelect2}
+                                        isMulti
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <label htmlFor="quantity2" className="form-label">Quantity</label>
+                                <div className="input-group mb-3">
+                                    <span className="input-group-text"><i
+                                        className="fas fa-sort-numeric-up-alt"></i></span>
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        id="quantity2"
+                                        name="quantity2"
+                                        value={this.state.quantity2}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <label htmlFor="item" className="form-label">Item 3</label>
+                                <div className="mb-3">
+                                    <Select
+                                        options = {this.state.items}
+                                        className="basic-multi-select"
+                                        onChange={this.onItemSelect3}
+                                        isMulti
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <label htmlFor="quantity3" className="form-label">Quantity</label>
+                                <div className="input-group mb-3">
+                                    <span className="input-group-text"><i
+                                        className="fas fa-sort-numeric-up-alt"></i></span>
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        id="quantity3"
+                                        name="quantity3"
+                                        value={this.state.quantity3}
                                         onChange={this.onChange}
                                     />
                                 </div>

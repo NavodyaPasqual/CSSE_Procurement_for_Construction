@@ -15,7 +15,9 @@ const createOrder = async (req, res) => {
 
 const getAllOrders = async (req, res) => {
     await Order.find({})
-        .populate('item', 'name itemID')
+        .populate('item1', 'name itemID')
+        .populate('item2', 'name itemID')
+        .populate('item3', 'name itemID')
         .populate('site', 'name siteID')
         .then(data=>{
             res.status(200).send({data: data});
@@ -52,6 +54,20 @@ const updateStatusById = async (req, res) => {
         })
 }
 
+const updateDeliveryStatusById = async (req, res) => {
+    const id = req.params.id;
+    const {deliveryStatus} = req.body;
+    const updateOrder = {
+        deliveryStatus
+    }
+    const update = await Order.findByIdAndUpdate(id, updateOrder)
+        .then(() => {
+            res.status(200).send({deliveryStatus: "Order delivered"})
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).send({deliveryStatus: " Error", error:err.message});
+        })
+}
 const deleteById = async (req, res) => {
     const id = req.params.id
     await Order.findByIdAndRemove(id).exec()
@@ -63,5 +79,6 @@ module.exports = {
     getAllOrders,
     orderById,
     updateStatusById,
+    updateDeliveryStatusById,
     deleteById
 }

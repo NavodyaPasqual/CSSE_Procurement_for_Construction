@@ -15,18 +15,40 @@ const OrderSchema = new mongoose.Schema(
             required: false,
             ref: 'sites'
         }],
-        item: [{
+        item1: [{
             type: mongoose.Schema.Types.ObjectId,
             required: false,
             ref: 'items'
         }],
-        quantity: {
+        item2: [{
+            type: mongoose.Schema.Types.ObjectId,
+            required: false,
+            ref: 'items'
+        }],
+        item3: [{
+            type: mongoose.Schema.Types.ObjectId,
+            required: false,
+            ref: 'items'
+        }],
+        quantity1: {
+            type: Number,
+            required: false
+        },
+        quantity2: {
+            type: Number,
+            required: false
+        },
+        quantity3: {
             type: Number,
             required: false
         },
         status: {
             type: String,
             default: 'Not decided'
+        },
+        deliveryStatus: {
+            type: String,
+            default: 'Not delivered'
         }
     },
     { timestamps: true}
