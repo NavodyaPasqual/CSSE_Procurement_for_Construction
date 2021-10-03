@@ -68,7 +68,7 @@ const ListOfSites = () => {
     };
 
     const deleteSite = (e, id) => {
-        const r = window.confirm("Do you really want to delete this site ?");
+        const r = window.confirm("Do you really want to delete the site ?");
         if(r == true) {
             axios.delete(`http://localhost:8081/site/delete/${id}`)
                 .then(response => {

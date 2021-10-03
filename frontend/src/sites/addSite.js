@@ -88,7 +88,7 @@ const AddSite = () => {
                             </div>
                         </div>
                         <div className="col-12">
-                            <label htmlFor="name" className="form-label">Site Name</label>
+                            <label htmlFor="name" className="form-label">Site name</label>
                             <div className="input-group mb-3">
                                 <span className="input-group-text"><i className="fas fa-building"></i></span>
                                 <input
@@ -102,7 +102,7 @@ const AddSite = () => {
                             </div>
                         </div>
                         <div className="col-12">
-                            <label htmlFor="location" className="form-label">Site Location</label>
+                            <label htmlFor="location" className="form-label">Site location</label>
                             <div className="input-group mb-3">
                                 <span className="input-group-text"><i className="fas fa-map-marker-alt"></i></span>
                                 <input
@@ -115,7 +115,7 @@ const AddSite = () => {
                                 />
                             </div>
                         </div>
-                        <button className="mt-5 button-black button2-black">Create New Site</button>
+                        <button className="mt-5 button-black button2-black">Create the Site</button>
                     </form>
                 </div>
             </div>

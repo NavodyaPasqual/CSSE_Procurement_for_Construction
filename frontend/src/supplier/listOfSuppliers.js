@@ -68,7 +68,7 @@ const ListOfSuppliers = () => {
     };
 
     const deleteSupplier = (e, id) => {
-        const r = window.confirm("Do you really want to delete this supplier ?");
+        const r = window.confirm("Do you really want to delete the supplier ?");
         if(r == true) {
             axios.delete(`http://localhost:8081/supplier/delete/${id}`)
                 .then(response => {

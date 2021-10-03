@@ -159,7 +159,7 @@ class AddOrder extends Component {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <label htmlFor="site" className="form-label">Site Name</label>
+                                <label htmlFor="site" className="form-label">Site name</label>
                                 <div className="mb-3">
                                     <Select
                                         options = {this.state.sites}
@@ -170,7 +170,7 @@ class AddOrder extends Component {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <label htmlFor="supplier" className="form-label">Supplier Name</label>
+                                <label htmlFor="supplier" className="form-label">Supplier name</label>
                                 <div className="mb-3">
                                     <Select
                                         options = {this.state.suppliers}
@@ -270,7 +270,7 @@ class AddOrder extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <button className="mt-5 button-black button2-black">Create New Item</button>
+                            <button className="mt-5 button-black button2-black">Create the Item</button>
                         </form>
                     </div>
                 </div>
