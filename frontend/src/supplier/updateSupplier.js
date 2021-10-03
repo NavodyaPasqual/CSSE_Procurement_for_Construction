@@ -69,7 +69,7 @@ class UpdateSupplier extends Component {
         axios.put('http://localhost:8081/supplier/update/' + this.props.match.params.id, supplierObject)
             .then((res) => {
                 console.log(res.data)
-                console.log('Supplier successfully updated')
+                console.log('Supplier Details successfully updated')
             }).catch((error) => {
             console.log(error)
         })
@@ -101,7 +101,7 @@ class UpdateSupplier extends Component {
                                     </div>
                                 </div>
                                 <div className="col-12">
-                                    <label htmlFor="name" className="form-label">Supplier name</label>
+                                    <label htmlFor="name" className="form-label">Supplier Name</label>
                                     <div className="input-group mb-3">
                                         <span className="input-group-text"><i className="fas fa-users"></i></span>
                                         <input
