@@ -61,7 +61,7 @@ class UpdateSites extends Component {
         axios.put('http://localhost:8081/site/update/' + this.props.match.params.id, siteObject)
             .then((res) => {
                 console.log(res.data)
-                console.log('Site successfully updated')
+                console.log('Site Details successfully updated')
             }).catch((error) => {
             console.log(error)
         })

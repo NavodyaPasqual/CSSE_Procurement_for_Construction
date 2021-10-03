@@ -1,13 +1,16 @@
-import React from "react";
+import React, {Component} from 'react';
+import './styles/dashboard.css'
 
-function Dashboard() {
+class Dashboard extends Component {
+    render() {
+        return (
+            <div className="wrapper">
 
-    return (
-        <div className="dashboard">
-            dash<br />
-            akjsdajkdjkashdjkashkdhjasda
-        </div>
-    );
+                 <p>Dashboard</p>
+
+            </div>
+        )
+    }
 }
 
 export default Dashboard;

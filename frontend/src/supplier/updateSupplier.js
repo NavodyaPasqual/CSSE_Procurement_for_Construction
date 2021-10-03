@@ -68,7 +68,7 @@ class UpdateSupplier extends Component {
         axios.put('http://localhost:8081/supplier/update/' + this.props.match.params.id, supplierObject)
             .then((res) => {
                 console.log(res.data)
-                console.log('Supplier successfully updated')
+                console.log('Supplier Details successfully updated')
             }).catch((error) => {
             console.log(error)
         })

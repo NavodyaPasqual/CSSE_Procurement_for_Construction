@@ -23,7 +23,7 @@ class ViewOrderList extends Component {
         if(r === true) {
             axios.delete(`http://localhost:8081/order/delete/${id}`)
                 .then(response => {
-                    alert('Data successfully deleted')
+                    alert('Order successfully deleted')
                     this.componentDidMount()
                 })
         }
