@@ -36,6 +36,7 @@ class AddOrder extends Component {
         this.onSiteSelect = this.onSiteSelect.bind(this);
         this.onSupplierSelect = this.onSupplierSelect.bind(this);
         this.state = initialState;
+
     }
 
     //to get workshop array from the backend

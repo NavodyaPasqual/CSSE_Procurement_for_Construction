@@ -24,6 +24,7 @@ const AddSite = () => {
     const handleContent = (event) => {
         console.log(event);
         setContent(event);
+
     }
 
     const handleChange = (name) => (event) => {

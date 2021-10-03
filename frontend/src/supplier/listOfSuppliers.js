@@ -14,6 +14,7 @@ const ListOfSuppliers = () => {
     const [values, setValues] = useState({
         loading: false,
     });
+
     const {
         loading
     } = values;

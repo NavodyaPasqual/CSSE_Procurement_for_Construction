@@ -8,6 +8,7 @@ class UpdateOrderApprovalStatus extends Component {
         this.state = {
             orders: [],
             isExpandClick: false
+
         }
     }
 

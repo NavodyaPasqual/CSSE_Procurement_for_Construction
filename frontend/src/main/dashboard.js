@@ -5,7 +5,7 @@ function Dashboard() {
     return (
         <div className="dashboard">
             dash<br />
-            akjsdajkdjkashdjkashkdhjasda
+            akjsdajkdjkashdjkashkdhjasdatttttttttttt
         </div>
     );
 }
