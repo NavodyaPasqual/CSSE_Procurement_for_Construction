@@ -85,7 +85,7 @@ const AddItems = () => {
                             </div>
                         </div>
                         <div className="col-12">
-                            <label htmlFor="name" className="form-label">Item name</label>
+                            <label htmlFor="name" className="form-label">Item Name</label>
                             <div className="input-group mb-3">
                                 <span className="input-group-text"><i className="fas fa-building"></i></span>
                                 <input
@@ -98,7 +98,7 @@ const AddItems = () => {
                                 />
                             </div>
                         </div>
-                        <button className="mt-5 button-black button2-black">Create the Item</button>
+                        <button className="mt-5 button-black button2-black">Create New Item</button>
                     </form>
                 </div>
             </div>

@@ -42,7 +42,7 @@ class ViewOrderList extends Component {
                                         <button className="btn btn-outline-danger" onClick={e => this.deleteOrder(e,item._id)}><i className="fas fa-trash">&nbsp;&nbsp;DELETE</i></button>
                                     </div>
                                     <div className="row">
-                                        <dt className="col-sm-2">orderID</dt>
+                                        <dt className="col-sm-2">Order ID</dt>
                                         <dd className="col-sm-10">{item.orderID}</dd>
                                     </div>
                                     {item.site && item.site.length > 0 ?

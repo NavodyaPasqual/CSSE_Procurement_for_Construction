@@ -93,7 +93,7 @@ class UpdateSites extends Component {
                                     </div>
                                 </div>
                                 <div className="col-12">
-                                    <label htmlFor="name" className="form-label">Site name</label>
+                                    <label htmlFor="name" className="form-label">Site Name</label>
                                     <div className="input-group mb-3">
                                         <span className="input-group-text"><i className="fas fa-building"></i></span>
                                         <input
@@ -107,7 +107,7 @@ class UpdateSites extends Component {
                                     </div>
                                 </div>
                                 <div className="col-12">
-                                    <label htmlFor="location" className="form-label">Site location</label>
+                                    <label htmlFor="location" className="form-label">Site Location</label>
                                     <div className="input-group mb-3">
                                         <span className="input-group-text"><i className="fas fa-map-marker-alt"></i></span>
                                         <input

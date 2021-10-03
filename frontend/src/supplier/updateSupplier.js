@@ -100,7 +100,7 @@ class UpdateSupplier extends Component {
                                     </div>
                                 </div>
                                 <div className="col-12">
-                                    <label htmlFor="name" className="form-label">Supplier name</label>
+                                    <label htmlFor="name" className="form-label">Supplier Name</label>
                                     <div className="input-group mb-3">
                                         <span className="input-group-text"><i className="fas fa-users"></i></span>
                                         <input
