@@ -75,11 +75,88 @@ const deleteById = async (req, res) => {
     res.send('order Deleted');
 }
 
+const countOrders = (req, res) => {
+    Order.count({ }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
+const countApprovalStatusApproved = (req, res) => {
+    Order.count({ status: "Approved" }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
+const countApprovalStatusNotApproved = (req, res) => {
+    Order.count({ status: "Not approved" }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
+const countApprovalStatusNotDecided = (req, res) => {
+    Order.count({ status: "Not decided" }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
+const countDeliveredStatusDelivered = (req, res) => {
+    Order.count({ deliveryStatus: "Delivered" }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
+const countDeliveredStatusNotDelivered = (req, res) => {
+    Order.count({ deliveryStatus: "Not delivered" }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
+const countDeliveredStatusPending = (req, res) => {
+    Order.count({ deliveryStatus: "Pending" }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
 module.exports = {
     createOrder,
     getAllOrders,
     orderById,
     updateStatusById,
     updateDeliveryStatusById,
-    deleteById
+    deleteById,
+    countOrders,
+    countApprovalStatusApproved,
+    countApprovalStatusNotApproved,
+    countApprovalStatusNotDecided,
+    countDeliveredStatusDelivered,
+    countDeliveredStatusNotDelivered,
+    countDeliveredStatusPending
 }

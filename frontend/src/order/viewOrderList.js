@@ -218,6 +218,12 @@ class ViewOrderList extends Component {
                                         {item.deliveryStatus === "Not delivered" &&
                                         <div className="row">
                                             <dt className="col-sm-2">Delivery Status</dt>
+                                            <dd className="col-sm-10"><h6><span className="badge bg-danger">{item.deliveryStatus}</span></h6></dd>
+                                        </div>
+                                        }
+                                        {item.deliveryStatus === "Pending" &&
+                                        <div className="row">
+                                            <dt className="col-sm-2">Delivery Status</dt>
                                             <dd className="col-sm-10"><h6><span className="badge bg-warning">{item.deliveryStatus}</span></h6></dd>
                                         </div>
                                         }

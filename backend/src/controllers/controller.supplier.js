@@ -62,10 +62,21 @@ const deleteById = async (req, res) => {
     res.send("Deleted");
 };
 
+const countSuppliers = (req, res) => {
+    Supplier.count({ }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
 module.exports = {
     createSupplier,
     siteById,
     getAllSuppliers,
     updateById,
-    deleteById
+    deleteById,
+    countSuppliers
 }

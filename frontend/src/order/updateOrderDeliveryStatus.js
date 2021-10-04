@@ -33,6 +33,13 @@ class UpdateOrderDeliveryStatus extends Component {
             })
     }
 
+    pending(e, id){
+        axios.put(`http://localhost:8081/order/update/delivery-status/${id}`, {deliveryStatus: "Pending", id:id})
+            .then(response => {
+                this.componentDidMount()
+            })
+    }
+
     render() {
         return (
             <div className="background-workshop">
@@ -213,6 +220,13 @@ class UpdateOrderDeliveryStatus extends Component {
                                         <div className="row">
                                             <dt className="col-sm-2">Delivery Status</dt>
                                             <dd className="col-sm-10"><h6><span
+                                                className="badge bg-danger">{item.deliveryStatus}</span></h6></dd>
+                                        </div>
+                                        }
+                                        {item.deliveryStatus === "Pending" &&
+                                        <div className="row">
+                                            <dt className="col-sm-2">Delivery Status</dt>
+                                            <dd className="col-sm-10"><h6><span
                                                 className="badge bg-warning">{item.deliveryStatus}</span></h6></dd>
                                         </div>
                                         }
@@ -229,6 +243,11 @@ class UpdateOrderDeliveryStatus extends Component {
                                                 </button>
                                                 &nbsp;
                                                 <button className="btn btn-outline-warning ml-4"
+                                                        onClick={e => this.pending(e, item._id)}>
+                                                    <i className="fas fa-times"></i> &nbsp; Pending
+                                                </button>
+                                                &nbsp;
+                                                <button className="btn btn-outline-danger ml-4"
                                                         onClick={e => this.notDelivered(e, item._id)}>
                                                     <i className="fas fa-times"></i> &nbsp; Not delivered
                                                 </button>

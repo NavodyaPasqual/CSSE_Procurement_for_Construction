@@ -62,10 +62,21 @@ const deleteById = async (req, res) => {
     res.send("Deleted");
 };
 
+const countItems = (req, res) => {
+    Item.count({ }, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(result);
+        }
+    });
+};
+
 module.exports = {
     createItem,
     itemById,
     getAllItems,
     updateById,
-    deleteById
+    deleteById,
+    countItems
 }

@@ -12,5 +12,7 @@ module.exports = function () {
     router.delete('/delete/:id', controller.deleteById);
 
     router.put('/update/:id', controller.updateById);
+
+    router.get('/sites/count', controller.countSites);
     return router;
 }
