@@ -10,6 +10,8 @@ import ListOfOrders from "./listOfOrders";
 import ListOfSites from "./listOfSites";
 import ListOfSuppliers from "./listOfSuppliers";
 import axios from "axios";
+import ApprovalChart from "./approvalChart";
+import DeliveryChart from "./deliveryChart";
 
 class Dashboard extends Component {
     constructor(props) {
@@ -72,7 +74,6 @@ class Dashboard extends Component {
                 this.setState({supplierCount: response.data})
             } )
     }
-
 
     render() {
         return (
@@ -176,6 +177,16 @@ class Dashboard extends Component {
                 </div>
                 <div className=" mt-1 row row-cols-1 p-3 row-cols-md-2 g-4">
                     <div className="col">
+                        <div className="card">
+                            <ApprovalChart/>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="card">
+                            <DeliveryChart/>
+                        </div>
+                    </div>
+                    <div className="col">
                         <ListOfOrders/>
                     </div>
                     <div className="col">
@@ -184,8 +195,8 @@ class Dashboard extends Component {
                     <div className="col">
                         <ListOfSuppliers/>
                     </div>
-                </div>
 
+                </div>
             </div>
         )
     }
