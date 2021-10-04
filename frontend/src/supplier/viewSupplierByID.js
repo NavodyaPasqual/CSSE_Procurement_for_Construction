@@ -9,6 +9,7 @@ class ViewSupplierByID extends Component {
     constructor(props) {
         super(props)
 
+
         // State
         this.state = {
             supplierID: '',

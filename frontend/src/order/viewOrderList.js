@@ -14,6 +14,7 @@ class ViewOrderList extends Component {
         axios.get('http://localhost:8081/order/')
             .then(response => {
                 this.setState({orders: response.data.data})
+
             } )
     }
 

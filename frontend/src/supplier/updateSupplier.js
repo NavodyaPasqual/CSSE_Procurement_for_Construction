@@ -13,6 +13,7 @@ class UpdateSupplier extends Component {
         this.onChangeContactNo = this.onChangeContactNo.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
+
         // State
         this.state = {
             supplierID: '',

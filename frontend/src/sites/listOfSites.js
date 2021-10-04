@@ -53,6 +53,7 @@ const ListOfSites = () => {
             .catch(err => console.log(err));
     };
 
+
     const loadSite = () => {
         getSite()
             .then(data => {
