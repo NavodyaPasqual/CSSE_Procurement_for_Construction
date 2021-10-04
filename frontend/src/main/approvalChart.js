@@ -40,7 +40,7 @@ class ApprovalChart extends Component{
                         labels: ['Approved', 'Not Approved', 'Not Decided'],
                         datasets:[
                             {
-                                label:'Orders Approval Status',
+                                label:'Approval Status',
                                 data:[
                                     this.state.orderApprovedStatus,
                                     this.state.orderNotApprovedStatus,
