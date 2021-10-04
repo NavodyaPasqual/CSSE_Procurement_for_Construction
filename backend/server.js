@@ -50,8 +50,8 @@ app.route('/').get((req, res) => {
 });
 
 
-require('./routes/auth.routes')(app);
-require('./routes/user.routes')(app);
+require('./src/routes/auth.routes')(app);
+require('./src/routes/user.routes')(app);
 
 
 app.use('/item', ItemRoute());
@@ -65,7 +65,7 @@ app.listen(PORT, () => {
     console.log('...Wait DB connecting...');
 });
 
-const db = require("./Modules");
+const db = require("./src/modules");
 const Role = db.role;
 
 
