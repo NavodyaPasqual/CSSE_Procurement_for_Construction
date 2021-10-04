@@ -2,7 +2,6 @@
     width: 95%;
     margin: auto;
     padding: 10px;
-    font-family: "Nunito Sans";
 }
 
 .admin-container .row .col .card-d{
@@ -13,8 +12,28 @@
     font-weight: bold;
 }
 
-.admin-container h5 {
+.bg-custom{
+    background-color: #969393;
+}
+
+.admin-container h6 {
     color: #000000;
+    font-weight: bold;
+}
+
+.admin-container p {
+    color: #6d6a6d;
+    font-weight: normal;
+}
+
+.admin-container th{
+    color: #6d6a6d;
+    font-weight: normal;
+}
+
+.admin-container td{
+    color: #6d6a6d;
+    font-weight: lighter;
 }
 
 .admin-container a {

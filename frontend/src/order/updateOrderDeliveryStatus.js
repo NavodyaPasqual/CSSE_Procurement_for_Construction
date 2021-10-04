@@ -21,24 +21,36 @@ class UpdateOrderDeliveryStatus extends Component {
     }
 
     delivered(e, id){
-        axios.put(`http://localhost:8081/order/update/delivery-status/${id}`, {deliveryStatus: "Delivered", id:id})
-            .then(response => {
-                this.componentDidMount()
-            })
+        let answer = window.confirm('Are you sure you want to update the delivery status to delivered?');
+        if(answer) {
+            axios.put(`http://localhost:8081/order/update/delivery-status/${id}`, {deliveryStatus: "Delivered", id: id})
+                .then(response => {
+                    this.componentDidMount()
+                })
+        }
     }
 
     notDelivered(e, id){
-        axios.put(`http://localhost:8081/order/update/delivery-status/${id}`, {deliveryStatus: "Not delivered", id:id})
-            .then(response => {
-                this.componentDidMount()
+        let answer = window.confirm('Are you sure you want to update the delivery status to not delivered?');
+        if(answer) {
+            axios.put(`http://localhost:8081/order/update/delivery-status/${id}`, {
+                deliveryStatus: "Not delivered",
+                id: id
             })
+                .then(response => {
+                    this.componentDidMount()
+                })
+        }
     }
 
     pending(e, id){
-        axios.put(`http://localhost:8081/order/update/delivery-status/${id}`, {deliveryStatus: "Pending", id:id})
-            .then(response => {
-                this.componentDidMount()
-            })
+        let answer = window.confirm('Are you sure you want to update the delivery status to pending?');
+        if(answer) {
+            axios.put(`http://localhost:8081/order/update/delivery-status/${id}`, {deliveryStatus: "Pending", id: id})
+                .then(response => {
+                    this.componentDidMount()
+                })
+        }
     }
 
     render() {
@@ -50,7 +62,7 @@ class UpdateOrderDeliveryStatus extends Component {
                         {this.state.orders.length > 0 && this.state.orders.map((item,index) => (
                             <div key={index} >
                                 {item.status === "Approved" &&
-                                <div className="card shadow mb-5 bg-body rounded">
+                                <div className="card border-dark shadow mb-5 bg-body rounded">
                                     <div className="card-header">
                                         <h5>Order ID: <b>{item.orderID}</b></h5>
                                     </div>
@@ -245,7 +257,7 @@ class UpdateOrderDeliveryStatus extends Component {
                                                 &nbsp;
                                                 <button className="btn btn-outline-warning ml-4"
                                                         onClick={e => this.pending(e, item._id)}>
-                                                    <i className="fas fa-times"></i> &nbsp; Pending
+                                                    <i className="fas fa-hourglass-half"></i> &nbsp; Pending
                                                 </button>
                                                 &nbsp;
                                                 <button className="btn btn-outline-danger ml-4"

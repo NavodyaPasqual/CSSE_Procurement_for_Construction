@@ -86,8 +86,8 @@ class Dashboard extends Component {
                                 <div className="card mr-1 border-dark m-3 p-3 rounded">
                                     <div className="row row-cols-1 row-cols-md-2">
                                         <div className="col">
-                                            <h5>Sites</h5>
-                                            <h6><span className="badge bg-dark">Total Sites &nbsp;&nbsp;{this.state.siteCount}</span></h6>
+                                            <h6>Sites</h6>
+                                            <p>Total Sites &nbsp;&nbsp;- {this.state.siteCount}</p>
                                         </div>
                                         <div className="col">
                                             <img src={site} height="100px"/>
@@ -101,8 +101,8 @@ class Dashboard extends Component {
                                 <div className="card border-dark shadow p-3 m-3 rounded">
                                     <div className="row row-cols-1 row-cols-md-2">
                                         <div className="col">
-                                            <h5>Items</h5>
-                                            <h6><span className="badge bg-dark">Total Items &nbsp;&nbsp;{this.state.itemCount}</span></h6>
+                                            <h6>Items</h6>
+                                            <p>Total Items &nbsp;&nbsp;- {this.state.itemCount}</p>
                                         </div>
                                         <div className="col">
                                             <img src={item} height="100px"/>
@@ -116,8 +116,8 @@ class Dashboard extends Component {
                                 <div className="card border-dark shadow p-3 m-3 rounded">
                                     <div className="row row-cols-1 row-cols-md-2">
                                         <div className="col">
-                                            <h5>Suppliers</h5>
-                                            <h6><span className="badge bg-dark">Total Suppliers &nbsp;&nbsp;{this.state.supplierCount}</span></h6>
+                                            <h6>Suppliers</h6>
+                                            <p>Total Suppliers &nbsp;&nbsp;- {this.state.supplierCount}</p>
                                         </div>
                                         <div className="col">
                                             <img src={suppliers} height="100px"/>
@@ -131,8 +131,8 @@ class Dashboard extends Component {
                                 <div className="card border-dark shadow p-3 m-3 rounded">
                                     <div className="row row-cols-1 row-cols-md-2">
                                         <div className="col">
-                                            <h5>Orders</h5>
-                                            <h6><span className="badge bg-dark">Total Orders &nbsp;&nbsp;{this.state.orderCount}</span></h6>
+                                            <h6>Orders</h6>
+                                            <p>Total Orders &nbsp;&nbsp;- {this.state.orderCount}</p>
                                         </div>
                                         <div className="col">
                                             <img src={order} height="100px"/>
@@ -146,9 +146,9 @@ class Dashboard extends Component {
                                 <div className="card border-dark shadow p-3 m-3 rounded">
                                     <div className="row row-cols-1 row-cols-md-2">
                                         <div className="col">
-                                            <h5>Order Approval Status</h5>
-                                            <h6><span className="badge bg-dark">Approved Orders &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.orderApprovedStatus}</span></h6>
-                                            <h6><span className="badge bg-dark">Not Decided Orders &nbsp;&nbsp;{this.state.orderNotDecidedStatus}</span></h6>
+                                            <h6>Order Approval Status</h6>
+                                            <p>Approved Orders &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- {this.state.orderApprovedStatus}</p>
+                                            <p>Not Decided Orders &nbsp;&nbsp;- {this.state.orderNotDecidedStatus}</p>
                                         </div>
                                         <div className="col">
                                             <img src={approval} height="100px"/>
@@ -162,9 +162,9 @@ class Dashboard extends Component {
                                 <div className="card border-dark shadow p-3 m-3 rounded">
                                     <div className="row row-cols-1 row-cols-md-2">
                                         <div className="col">
-                                            <h5>Order Delivery Status</h5>
-                                            <h6><span className="badge bg-dark">Delivered Orders &nbsp;{this.state.ordersDeliveryStatus}</span></h6>
-                                            <h6><span className="badge bg-dark">Pending Orders &nbsp;&nbsp;&nbsp;&nbsp;{this.state.ordersPendingStatus}</span></h6>
+                                            <h6>Order Delivery Status</h6>
+                                            <p>Delivered Orders &nbsp;- {this.state.ordersDeliveryStatus}</p>
+                                            <p>Pending Orders &nbsp;&nbsp;&nbsp;&nbsp;- {this.state.ordersPendingStatus}</p>
                                         </div>
                                         <div className="col">
                                             <img src={delivery_status} height="100px"/>

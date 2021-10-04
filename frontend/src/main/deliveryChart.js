@@ -38,18 +38,17 @@ class DeliveryChart extends Component{
             <div className="chart">
                 <Bar
                     data={{
-                        labels: ['Delivered', 'Not Delivered', 'Pending'],
+                        labels: ['Delivered', 'Pending', 'Not Delivered'],
                         datasets:[
                             {
-                                label:'Delivery Status',
+                                label:'Orders Delivery Status',
                                 data:[
                                     this.state.ordersDeliveryStatus,
-                                    this.state.ordersNotDeliveryStatus,
                                     this.state.ordersPendingStatus,
+                                    this.state.ordersNotDeliveryStatus
                                 ],
                                 backgroundColor:[
-                                    'rgba(75, 192, 192, 0.6)',
-                                    'rgba(153, 102, 255, 0.6)',
+                                    'rgb(102, 255, 135, 0.6)',
                                     'rgba(255, 159, 64, 0.6)',
                                     'rgba(255, 99, 132, 0.6)'
                                 ]

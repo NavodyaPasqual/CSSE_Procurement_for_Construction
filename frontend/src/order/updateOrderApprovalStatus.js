@@ -21,17 +21,23 @@ class UpdateOrderApprovalStatus extends Component {
     }
 
     approve(e, id){
-        axios.put(`http://localhost:8081/order/update/status/${id}`, {status: "Approved", id:id})
-            .then(response => {
-                this.componentDidMount()
-            })
+        let answer = window.confirm('Are you sure you want to update the approval status to approved?');
+        if(answer) {
+            axios.put(`http://localhost:8081/order/update/status/${id}`, {status: "Approved", id: id})
+                .then(response => {
+                    this.componentDidMount()
+                })
+        }
     }
 
     decline(e, id){
-        axios.put(`http://localhost:8081/order/update/status/${id}`, {status: "Not approved", id:id})
-            .then(response => {
-                this.componentDidMount()
-            })
+        let answer = window.confirm('Are you sure you want to update the approval status to not approved?');
+        if(answer) {
+            axios.put(`http://localhost:8081/order/update/status/${id}`, {status: "Not approved", id: id})
+                .then(response => {
+                    this.componentDidMount()
+                })
+        }
     }
 
     render() {
@@ -42,7 +48,7 @@ class UpdateOrderApprovalStatus extends Component {
                     <div>
                         {this.state.orders.length > 0 && this.state.orders.map((item,index) => (
                             <div key={index} >
-                                <div className="card shadow mb-5 bg-body rounded">
+                                <div className="card border-dark shadow mb-5 bg-body rounded">
                                     <div className="card-header">
                                         <h5>Order ID: <b>{item.orderID}</b></h5>
                                     </div>
