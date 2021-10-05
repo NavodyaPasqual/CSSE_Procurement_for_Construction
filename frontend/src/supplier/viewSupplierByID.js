@@ -13,10 +13,10 @@ class ViewSupplierByID extends Component {
         // State
         this.state = {
             supplierID: '',
-            Name: '',
-            Address: '',
-            ContactNo: '',
-            Loading: false
+            name: '',
+            address: '',
+            contactNo: '',
+            loading: false
         }
     }
 
