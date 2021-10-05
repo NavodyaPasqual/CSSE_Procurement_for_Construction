@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './styles/button.css';
+import './styles/buttons.css';
 import './styles/forms.css';
-import './styles/alert.css';
+import './styles/alerts.css';
 import axios from "axios";
 import {Link} from "react-router-dom";
 
@@ -13,10 +13,10 @@ class ViewSupplierByID extends Component {
         // State
         this.state = {
             supplierID: '',
-            name: '',
-            address: '',
-            contactNo: '',
-            loading: false
+            Name: '',
+            Address: '',
+            ContactNo: '',
+            Loading: false
         }
     }
 
