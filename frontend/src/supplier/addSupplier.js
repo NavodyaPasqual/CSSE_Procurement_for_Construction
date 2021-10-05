@@ -6,11 +6,11 @@ import axios from "axios";
 const AddSupplier = () => {
     const [state, setState] = useState({
         supplierID: '',
-        name: '',
-        address: '',
-        contactNo: '',
-        loading: false,
-        error: '',
+        Name: '',
+        Address: '',
+        ContactNo: '',
+        Loading: false,
+        Error: '',
     });
 
 
