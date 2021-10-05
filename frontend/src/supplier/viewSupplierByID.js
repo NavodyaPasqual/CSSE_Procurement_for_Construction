@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './styles/buttons.css';
+import './styles/button.css';
 import './styles/forms.css';
-import './styles/alerts.css';
+import './styles/alert.css';
 import axios from "axios";
 import {Link} from "react-router-dom";
 
