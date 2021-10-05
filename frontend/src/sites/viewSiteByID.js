@@ -12,10 +12,10 @@ class ViewSiteByID extends Component {
 
         // State
         this.state = {
-            SiteID: '',
-            Name: '',
-            Location: '',
-            Loading: false
+            siteID: '',
+            name: '',
+            location: '',
+            loading: false
         }
     }
 
