@@ -19,11 +19,11 @@ const ListOfSites = () => {
     } = values;
 
     const search = () => {
-        return site.filter((item) => {
-            if (item.region === filterParam) {
+        return site.filter((items) => {
+            if (items.region === filterParam) {
                 return searchParam.some((newItem) => {
                     return (
-                        item[newItem]
+                        items[newItem]
                             .toString()
                             .toLowerCase()
                             .indexOf(q.toLowerCase()) > -1
