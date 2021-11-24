@@ -5,12 +5,14 @@
 
 ###### WE_51
 
-### Members :)
+### Members :)                        
 
-###### A.G Ruvindu Kaushalya - Leader (IT19062884)<br/>
-###### Pasqual N.T. (IT19408316)  
-###### Amarasinghe A.A.B.G. (IT19061580)                              
-###### Wangchen T. (IT19098838)                               
+| Name                     | IT number     |
+| ------------------------ | ------------- |
+| Ruvindu Kaushalya A. G.  | IT19062884    |
+| Pasqual N.T.             | IT19408316    |  
+| Wangchen T.              | IT19098838    |
+| Amarasinghe A.A.B.G.     | IT19061580    |
   
 ## Backend Technologies
 
