@@ -1,6 +1,6 @@
 # PLATINUM FORT
 
-![Home Page](https://user-images.githubusercontent.com/68048593/143227612-97eadc2b-69d8-44c5-a198-56a2359fd846.jpg)
+<kbd>![Home Page](https://user-images.githubusercontent.com/68048593/143227612-97eadc2b-69d8-44c5-a198-56a2359fd846.jpg)</kdb>
 
 ### Group no
 
