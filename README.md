@@ -1,5 +1,6 @@
 # PLATINUM FORT
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=CSSE_Procurement_for_Construction.visitor-badge)
+
+![Home Page](https://user-images.githubusercontent.com/68048593/143227612-97eadc2b-69d8-44c5-a198-56a2359fd846.jpg)
 
 ### Group no
 
@@ -23,3 +24,5 @@
 ## Frontend Technologies
 
     react boostrap materialUI 
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=CSSE_Procurement_for_Construction.visitor-badge)
